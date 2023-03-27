@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:healthy.ViewModels"
+             x:Class="healthy.Views.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:MainViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Spacing="0" VerticalOptions="Start"> 
+            <Label FontSize="28" FontAttributes="Bold" TextColor="DeepPink" Margin="0,50,0,10" Text=" Welcome to Grocery store "
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Đến Một Lần sẽ  " FontSize="40"
+               TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text=" Có Lần Hai" FontSize="40"
+                TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image Margin="50" Source="chef.png"/>
+            <Button Text="Let's start" BackgroundColor="Pink" TextColor="Black" Padding="10,0" CornerRadius="20" HorizontalOptions="End" Margin="0,0,15,30" Command="{Binding LestStartCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
